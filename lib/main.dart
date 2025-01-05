@@ -10,7 +10,17 @@ void main() {
 //And arugment when calling a func
 //MaterialApp is a widget, to create it you need tp add () after the name MaterialApp()
 //MaterialApp() - so-called clause, or contructor function of a class
-  runApp(MaterialApp(home: Text()));
+//const - keyword - helps Dart optimize the runtime performance of the app
+//const makes widget reusable
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    ),
+  );
 }
 
 
