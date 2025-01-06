@@ -13,10 +13,30 @@ void main() {
 //const - keyword - helps Dart optimize the runtime performance of the app
 //const makes widget reusable
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 74, 6, 191),
+                Colors.deepPurple,
+                Color.fromARGB(255, 132, 107, 175),
+                Color.fromARGB(255, 177, 155, 213),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: const Center(
+            child: Text(
+              'Hello World!',
+              style: TextStyle(
+                fontSize: 28,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     ),
