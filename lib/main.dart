@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'gradient_container.dart';
+import 'package:first_app/gradient_container.dart';
 
 // void-return type // main-func name
 // main() - is the main entry point of a Dart app. It gets executed automatically so need to call it.
@@ -13,37 +15,22 @@ void main() {
 //const - keyword - helps Dart optimize the runtime performance of the app
 //const makes widget reusable
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 74, 6, 191),
-                Colors.deepPurple,
-                Color.fromARGB(255, 132, 107, 175),
-                Color.fromARGB(255, 177, 155, 213),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'Hello World!',
-              style: TextStyle(
-                fontSize: 28,
-                color: Colors.amber,
-              ),
-            ),
-          ),
+        body: GradientContainer(
+          color: [
+            Color.fromARGB(255, 2, 41, 1),
+            Color.fromARGB(255, 6, 104, 4),
+            Color.fromARGB(255, 7, 128, 5),
+            Color.fromARGB(255, 5, 168, 3),
+          ],
         ),
       ),
     ),
   );
 }
 
-class 
+
 
 
 
